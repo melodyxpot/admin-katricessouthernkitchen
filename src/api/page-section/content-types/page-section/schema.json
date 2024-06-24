@@ -1,18 +1,18 @@
 {
   "kind": "collectionType",
-  "collectionName": "services",
+  "collectionName": "page_sections",
   "info": {
-    "singularName": "service",
-    "pluralName": "services",
-    "displayName": "Service"
+    "singularName": "page-section",
+    "pluralName": "page-sections",
+    "displayName": "Page Sections"
   },
   "options": {
     "draftAndPublish": true
   },
   "pluginOptions": {},
   "attributes": {
-    "description": {
-      "type": "text"
+    "page": {
+      "type": "uid"
     },
     "image": {
       "allowedTypes": [
@@ -23,6 +23,9 @@
       ],
       "type": "media",
       "multiple": false
+    },
+    "description": {
+      "type": "text"
     }
   }
 }
