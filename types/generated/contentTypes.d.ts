@@ -871,7 +871,14 @@ export interface ApiProductProduct extends Schema.CollectionType {
   attributes: {
     name: Attribute.String;
     description: Attribute.Text;
-    price: Attribute.Float;
+    price: Attribute.Float &
+      Attribute.Required &
+      Attribute.SetMinMax<
+        {
+          min: 5;
+        },
+        number
+      >;
     category: Attribute.Relation<
       'api::product.product',
       'manyToOne',

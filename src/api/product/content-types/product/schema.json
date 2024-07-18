@@ -19,7 +19,9 @@
       "type": "text"
     },
     "price": {
-      "type": "float"
+      "type": "float",
+      "required": true,
+      "min": 5
     },
     "category": {
       "type": "relation",
